@@ -125,7 +125,7 @@ class FoodMenuState extends State<FoodMenu> {
       height: 333,
       child: ListView(
         scrollDirection: Axis.vertical,
-        children: <Widget>[Menu1(),Menu2(),],
+        children: <Widget>[Menu1(),Menu2(),Menu3(),],
       ),
     );
   }
@@ -264,6 +264,72 @@ class Menu2State extends State<Menu2> {
   }
 }
 //-------------------------End Menu 2 -----------------------------//
+
+//------------------------- Menu 3 -----------------------------//
+class Menu3 extends StatefulWidget {
+  Menu3State createState() => Menu3State();
+}
+
+class Menu3State extends State<Menu3> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Image.asset(
+          "assets/images/Menu3.jpg",
+          width: 230,
+        ),
+        Container(
+          alignment: Alignment.center,
+          width: 181,
+          height: 147,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "Menu 3",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  MaterialButton(
+                    color: Colors.white,
+                    minWidth: 20,
+                    child: Icon(
+                      Icons.remove_circle,
+                      size: 30,
+                    ),
+                    onPressed: () => setState(() {
+                      if (countMenu3 == 0) {
+                        countMenu3 = 0;
+                      } else {
+                        countMenu3--;
+                      }
+                    }),
+                  ),
+                  Text(
+                    '$countMenu3',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                  MaterialButton(
+                    color: Colors.white,
+                    minWidth: 20,
+                    child: Icon(Icons.add_circle, size: 30),
+                    onPressed: () => setState(() {
+                      countMenu3++;
+                    }),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+//-------------------------End Menu 3 -----------------------------//
 
 //------------------------- Button to Second Page -------------------------------------//
 class GotoPage2 extends StatefulWidget {
