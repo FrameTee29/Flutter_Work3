@@ -102,8 +102,39 @@ class SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text("Your Order")),
-        body: Container(
-          child: Text("Frame"),
+        body: Column(
+          children: <Widget>[
+            if(countMenu1!=0)
+            Row(
+              children: <Widget>[
+                Text("Frame1")
+              ],
+            ),
+            if(countMenu2!=0)
+            Row(
+              children: <Widget>[
+                Text("Frame2")
+              ],
+            ),
+            if(countMenu3!=0)
+            Row(
+              children: <Widget>[
+                Text("Frame3")
+              ],
+            ),
+            if(countMenu4!=0)
+            Row(
+              children: <Widget>[
+                Text("Frame4")
+              ],
+            ),
+            if(countMenu5!=0)
+            Row(
+              children: <Widget>[
+                Text("Frame5")
+              ],
+            ),
+          ],
         ));
   }
 }
@@ -125,7 +156,7 @@ class FoodMenuState extends State<FoodMenu> {
       height: 333,
       child: ListView(
         scrollDirection: Axis.vertical,
-        children: <Widget>[Menu1(),Menu2(),Menu3(),Menu4(),Menu5()],
+        children: <Widget>[Menu1(), Menu2(), Menu3(), Menu4(), Menu5()],
       ),
     );
   }
@@ -331,7 +362,6 @@ class Menu3State extends State<Menu3> {
 }
 //-------------------------End Menu 3 -----------------------------//
 
-
 //------------------------- Menu 4 -----------------------------//
 class Menu4 extends StatefulWidget {
   Menu4State createState() => Menu4State();
@@ -479,10 +509,19 @@ class GotoPage2State extends State<GotoPage2> {
         RaisedButton(
           child: Text("Submit Order",
               style: TextStyle(color: Colors.black, fontSize: 25)),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SecondPage()));
-          },
+          onPressed: () => setState(() {
+            if (countMenu1 == 0 &&
+                countMenu2 == 0 &&
+                countMenu3 == 0 &&
+                countMenu4 == 0 &&
+                countMenu5 == 0) {
+              opacity = 1.0;
+            } else {
+              opacity = 0.0;
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SecondPage()));
+            }
+          }),
         ),
         AnimatedOpacity(
           duration: Duration(seconds: 1),
