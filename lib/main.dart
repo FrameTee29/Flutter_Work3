@@ -104,6 +104,10 @@ class SecondPageState extends State<SecondPage> {
   }
 }
 
+//------------------------- End Seconde Page -------------------------------------//
+
+
+//------------------------- Button to Second Page -------------------------------------//
 class GotoPage2 extends StatefulWidget {
   @override
   GotoPage2State createState() => GotoPage2State();
@@ -132,3 +136,5 @@ class GotoPage2State extends State<GotoPage2> {
     );
   }
 }
+
+//-------------------------End Button to Second Page -------------------------------------//
