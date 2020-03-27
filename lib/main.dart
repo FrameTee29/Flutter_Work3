@@ -104,36 +104,140 @@ class SecondPageState extends State<SecondPage> {
         appBar: AppBar(title: Text("Your Order")),
         body: Column(
           children: <Widget>[
-            if(countMenu1!=0)
-            Row(
-              children: <Widget>[
-                Text("Frame1")
-              ],
-            ),
-            if(countMenu2!=0)
-            Row(
-              children: <Widget>[
-                Text("Frame2")
-              ],
-            ),
-            if(countMenu3!=0)
-            Row(
-              children: <Widget>[
-                Text("Frame3")
-              ],
-            ),
-            if(countMenu4!=0)
-            Row(
-              children: <Widget>[
-                Text("Frame4")
-              ],
-            ),
-            if(countMenu5!=0)
-            Row(
-              children: <Widget>[
-                Text("Frame5")
-              ],
-            ),
+            if (countMenu1 != 0)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(left: 20, top: 5),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Text("Menu1",style: TextStyle(fontSize:30),),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                          margin: EdgeInsets.only(right: 20),
+                          child: Text('$countMenu1',style: TextStyle(fontSize:30),),
+                        )
+                ],
+              ),
+
+              if (countMenu2 != 0)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(left: 20, top: 5),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Text("Menu2",style: TextStyle(fontSize:30),),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                          margin: EdgeInsets.only(right: 20),
+                          child: Text('$countMenu2',style: TextStyle(fontSize:30),),
+                        )
+                ],
+              ),
+
+              if (countMenu3 != 0)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(left: 20, top: 5),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Text("Menu3",style: TextStyle(fontSize:30),),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                          margin: EdgeInsets.only(right: 20),
+                          child: Text('$countMenu3',style: TextStyle(fontSize:30),),
+                        )
+                ],
+              ),
+
+              if (countMenu4 != 0)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(left: 20, top: 5),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Text("Menu4",style: TextStyle(fontSize:30),),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                          margin: EdgeInsets.only(right: 20),
+                          child: Text('$countMenu4',style: TextStyle(fontSize:30),),
+                        )
+                ],
+              ),
+
+              if (countMenu5 != 0)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(left: 20, top: 5),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.shopping_cart,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Text("Menu5",style: TextStyle(fontSize:30),),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                          margin: EdgeInsets.only(right: 20),
+                          child: Text('$countMenu5',style: TextStyle(fontSize:30),),
+                        )
+                ],
+              ),
           ],
         ));
   }
