@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
-int countMenu1 = 0;
-int countMenu2 = 0;
-int countMenu3 = 0;
-int countMenu4 = 0;
-int countMenu5 = 0;
+var countMenu1 = 0;
+var countMenu2 = 0;
+var countMenu3 = 0;
+var countMenu4 = 0;
+var countMenu5 = 0;
 
 class MyApp extends StatelessWidget {
   @override
@@ -125,8 +125,7 @@ class FoodMenuState extends State<FoodMenu> {
       height: 333,
       child: ListView(
         scrollDirection: Axis.vertical,
-        children: <Widget>[
-        ],
+        children: <Widget>[Menu1()],
       ),
     );
   }
@@ -135,19 +134,66 @@ class FoodMenuState extends State<FoodMenu> {
 //-------------------------End Food Menu -------------------------------------//
 
 //------------------------- Menu 1 -----------------------------//
-class Menu1 extends StatefulWidget{
-  Menu1State createState()=> Menu1State();
+class Menu1 extends StatefulWidget {
+  Menu1State createState() => Menu1State();
 }
 
-class Menu1State extends State<Menu1>{
+class Menu1State extends State<Menu1> {
   @override
-  Widget build(BuildContext context){
-    return 
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Image.asset(
+          "assets/images/Menu1.jpg",
+          width: 230,
+        ),
+        Container(
+          alignment: Alignment.center,
+          width: 181,
+          height: 147,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
+              Text(
+                "Menu 1",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  MaterialButton(
+                    color: Colors.white,
+                    minWidth: 20,
+                    child: Icon(Icons.remove_circle,size: 30,),
+                    onPressed: () => setState(() {
+                      if (countMenu1 == 0) {
+                        countMenu1 = 0;
+                      } else {
+                        countMenu1--;
+                      }
+                    }),
+                  ),
+                  Text(
+                    '$countMenu1',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                  MaterialButton(
+                    color: Colors.white,
+                    minWidth: 20,
+                    child: Icon(Icons.add_circle,size: 30),
+                    onPressed: () => setState(() {
+                      countMenu1++;
+                    }),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
 //-------------------------End Menu 1 -----------------------------//
-
-
 
 //------------------------- Button to Second Page -------------------------------------//
 class GotoPage2 extends StatefulWidget {
