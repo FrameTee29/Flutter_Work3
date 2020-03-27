@@ -6,7 +6,7 @@ int countMenu2 = 0;
 int countMenu3 = 0;
 int countMenu4 = 0;
 int countMenu5 = 0;
-var please="";
+var please = "";
 
 class MyApp extends StatelessWidget {
   @override
@@ -23,6 +23,7 @@ class Cocresturant extends StatefulWidget {
 }
 
 class CocresturantState extends State<Cocresturant> {
+  var opacity = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +106,6 @@ class CocresturantState extends State<Cocresturant> {
                                       child: Icon(
                                         Icons.remove_circle,
                                         size: 35,
-                                        
                                       ),
                                       onPressed: () => setState(() {
                                             if (countMenu1 == 0) {
@@ -300,7 +300,7 @@ class CocresturantState extends State<Cocresturant> {
                         )
                       ],
                     ),
-                    //Menu 5 
+                    //Menu 5
                     Row(
                       children: <Widget>[
                         Image.asset(
@@ -370,16 +370,25 @@ class CocresturantState extends State<Cocresturant> {
                         "Submit Order",
                         style: TextStyle(color: Colors.black, fontSize: 25),
                       ),
-                      onPressed: () => setState((){
-                        if(countMenu1==0 &&countMenu2==0 &&countMenu3==0 &&countMenu4==0 &&countMenu5==0 ){
-                          please = "***Please Select Menu***";
-                        }
-                        else{
-                          please = " ";
-                        }
-                      })),
-                  Text('$please',
-                      style: TextStyle(color: Colors.red, fontSize: 20))
+                      onPressed: () => setState(() {
+                            if (countMenu1 == 0 &&
+                                countMenu2 == 0 &&
+                                countMenu3 == 0 &&
+                                countMenu4 == 0 &&
+                                countMenu5 == 0) {
+                              please = "***Please Select Menu***";
+                              opacity = 1;
+                            } else {
+                              opacity = 0;
+                              please = " ";
+                            }
+                          })),
+                  AnimatedOpacity(
+                    duration: Duration(seconds: 1),
+                    child: Text('$please',
+                        style: TextStyle(color: Colors.red, fontSize: 20)),
+                    opacity: opacity,
+                  )
                 ],
               ),
             ),
