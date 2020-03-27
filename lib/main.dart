@@ -103,8 +103,9 @@ class CocresturantState extends State<Cocresturant> {
                                 children: <Widget>[
                                   FloatingActionButton(
                                       child: Icon(
-                                        Icons.remove,
-                                        size: 15,
+                                        Icons.remove_circle,
+                                        size: 35,
+                                        
                                       ),
                                       onPressed: () => setState(() {
                                             if (countMenu1 == 0) {
@@ -119,8 +120,8 @@ class CocresturantState extends State<Cocresturant> {
                                   ),
                                   FloatingActionButton(
                                     child: Icon(
-                                      Icons.add,
-                                      size: 15,
+                                      Icons.add_circle,
+                                      size: 35,
                                     ),
                                     onPressed: () => setState(() {
                                       countMenu1++;
@@ -159,8 +160,8 @@ class CocresturantState extends State<Cocresturant> {
                                 children: <Widget>[
                                   FloatingActionButton(
                                       child: Icon(
-                                        Icons.remove,
-                                        size: 15,
+                                        Icons.remove_circle,
+                                        size: 35,
                                       ),
                                       onPressed: () => setState(() {
                                             if (countMenu2 == 0) {
@@ -175,8 +176,8 @@ class CocresturantState extends State<Cocresturant> {
                                   ),
                                   FloatingActionButton(
                                     child: Icon(
-                                      Icons.add,
-                                      size: 15,
+                                      Icons.add_circle,
+                                      size: 35,
                                     ),
                                     onPressed: () => setState(() {
                                       countMenu2++;
@@ -214,8 +215,8 @@ class CocresturantState extends State<Cocresturant> {
                                 children: <Widget>[
                                   FloatingActionButton(
                                       child: Icon(
-                                        Icons.remove,
-                                        size: 15,
+                                        Icons.remove_circle,
+                                        size: 35,
                                       ),
                                       onPressed: () => setState(() {
                                             if (countMenu3 == 0) {
@@ -230,8 +231,8 @@ class CocresturantState extends State<Cocresturant> {
                                   ),
                                   FloatingActionButton(
                                     child: Icon(
-                                      Icons.add,
-                                      size: 15,
+                                      Icons.add_circle,
+                                      size: 35,
                                     ),
                                     onPressed: () => setState(() {
                                       countMenu3++;
@@ -269,8 +270,8 @@ class CocresturantState extends State<Cocresturant> {
                                 children: <Widget>[
                                   FloatingActionButton(
                                       child: Icon(
-                                        Icons.remove,
-                                        size: 15,
+                                        Icons.remove_circle,
+                                        size: 35,
                                       ),
                                       onPressed: () => setState(() {
                                             if (countMenu4 == 0) {
@@ -285,8 +286,8 @@ class CocresturantState extends State<Cocresturant> {
                                   ),
                                   FloatingActionButton(
                                     child: Icon(
-                                      Icons.add,
-                                      size: 15,
+                                      Icons.add_circle,
+                                      size: 35,
                                     ),
                                     onPressed: () => setState(() {
                                       countMenu4++;
@@ -324,8 +325,8 @@ class CocresturantState extends State<Cocresturant> {
                                 children: <Widget>[
                                   FloatingActionButton(
                                       child: Icon(
-                                        Icons.remove,
-                                        size: 15,
+                                        Icons.remove_circle,
+                                        size: 35,
                                       ),
                                       onPressed: () => setState(() {
                                             if (countMenu5 == 0) {
@@ -340,8 +341,8 @@ class CocresturantState extends State<Cocresturant> {
                                   ),
                                   FloatingActionButton(
                                     child: Icon(
-                                      Icons.add,
-                                      size: 15,
+                                      Icons.add_circle,
+                                      size: 35,
                                     ),
                                     onPressed: () => setState(() {
                                       countMenu5++;
