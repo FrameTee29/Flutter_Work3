@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
+int countMenu1 = 0;
+int countMenu2 = 0;
+int countMenu3 = 0;
+int countMenu4 = 0;
+int countMenu5 = 0;
 
 class MyApp extends StatelessWidget {
   @override
@@ -53,7 +58,6 @@ var componentHeader = Container(
 
 //-------------------------END Headder -------------------------------------//
 
-
 //------------------------- First Page -------------------------------------//
 class FirstPage extends StatefulWidget {
   @override
@@ -68,6 +72,7 @@ class FirstPageState extends State<FirstPage> {
       body: ListView(
         children: <Widget>[
           componentHeader,
+          FoodMenu(),
           Column(
             children: <Widget>[
               Container(
@@ -85,7 +90,6 @@ class FirstPageState extends State<FirstPage> {
 }
 
 //------------------------- End First Page -------------------------------------//
-
 
 //------------------------- Second Page -------------------------------------//
 class SecondPage extends StatefulWidget {
@@ -106,6 +110,44 @@ class SecondPageState extends State<SecondPage> {
 
 //------------------------- End Seconde Page -------------------------------------//
 
+//------------------------- Food Menu -------------------------------------//
+
+class FoodMenu extends StatefulWidget {
+  @override
+  FoodMenuState createState() => FoodMenuState();
+}
+
+class FoodMenuState extends State<FoodMenu> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.orange[300],
+      height: 333,
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        children: <Widget>[
+        ],
+      ),
+    );
+  }
+}
+
+//-------------------------End Food Menu -------------------------------------//
+
+//------------------------- Menu 1 -----------------------------//
+class Menu1 extends StatefulWidget{
+  Menu1State createState()=> Menu1State();
+}
+
+class Menu1State extends State<Menu1>{
+  @override
+  Widget build(BuildContext context){
+    return 
+  }
+}
+//-------------------------End Menu 1 -----------------------------//
+
+
 
 //------------------------- Button to Second Page -------------------------------------//
 class GotoPage2 extends StatefulWidget {
@@ -120,7 +162,8 @@ class GotoPage2State extends State<GotoPage2> {
     return Column(
       children: <Widget>[
         RaisedButton(
-          child: Text("Submit Order"),
+          child: Text("Submit Order",
+              style: TextStyle(color: Colors.black, fontSize: 25)),
           onPressed: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => SecondPage()));
