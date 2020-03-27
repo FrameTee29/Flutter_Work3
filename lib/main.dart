@@ -125,7 +125,7 @@ class FoodMenuState extends State<FoodMenu> {
       height: 333,
       child: ListView(
         scrollDirection: Axis.vertical,
-        children: <Widget>[Menu1()],
+        children: <Widget>[Menu1(),Menu2(),],
       ),
     );
   }
@@ -152,7 +152,8 @@ class Menu1State extends State<Menu1> {
           width: 181,
           height: 147,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
               Text(
                 "Menu 1",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -163,7 +164,10 @@ class Menu1State extends State<Menu1> {
                   MaterialButton(
                     color: Colors.white,
                     minWidth: 20,
-                    child: Icon(Icons.remove_circle,size: 30,),
+                    child: Icon(
+                      Icons.remove_circle,
+                      size: 30,
+                    ),
                     onPressed: () => setState(() {
                       if (countMenu1 == 0) {
                         countMenu1 = 0;
@@ -179,7 +183,7 @@ class Menu1State extends State<Menu1> {
                   MaterialButton(
                     color: Colors.white,
                     minWidth: 20,
-                    child: Icon(Icons.add_circle,size: 30),
+                    child: Icon(Icons.add_circle, size: 30),
                     onPressed: () => setState(() {
                       countMenu1++;
                     }),
@@ -194,6 +198,72 @@ class Menu1State extends State<Menu1> {
   }
 }
 //-------------------------End Menu 1 -----------------------------//
+
+//------------------------- Menu 2 -----------------------------//
+class Menu2 extends StatefulWidget {
+  Menu2State createState() => Menu2State();
+}
+
+class Menu2State extends State<Menu2> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Image.asset(
+          "assets/images/Menu2.jpg",
+          width: 230,
+        ),
+        Container(
+          alignment: Alignment.center,
+          width: 181,
+          height: 147,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "Menu 2",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  MaterialButton(
+                    color: Colors.white,
+                    minWidth: 20,
+                    child: Icon(
+                      Icons.remove_circle,
+                      size: 30,
+                    ),
+                    onPressed: () => setState(() {
+                      if (countMenu2 == 0) {
+                        countMenu2 = 0;
+                      } else {
+                        countMenu2--;
+                      }
+                    }),
+                  ),
+                  Text(
+                    '$countMenu2',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                  MaterialButton(
+                    color: Colors.white,
+                    minWidth: 20,
+                    child: Icon(Icons.add_circle, size: 30),
+                    onPressed: () => setState(() {
+                      countMenu2++;
+                    }),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+//-------------------------End Menu 2 -----------------------------//
 
 //------------------------- Button to Second Page -------------------------------------//
 class GotoPage2 extends StatefulWidget {
